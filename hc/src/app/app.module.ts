@@ -48,14 +48,22 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    HomeComponent,
+    UserComponent,
     
   ],
   imports: [
+    
     MatButtonModule,
     FormsModule,
     BrowserModule,
@@ -105,6 +113,7 @@ import { FormsModule } from '@angular/forms';
     PortalModule,
     ScrollingModule,
     LayoutModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
