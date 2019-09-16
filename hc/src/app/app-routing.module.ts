@@ -4,7 +4,7 @@ import { LoginComponent } from '../app/login/login.component';
 
 import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
-
+import { FeePortalComponent } from '../app/fee-portal/fee-portal.component';
 
 const routes: Routes = [
   {
@@ -15,6 +15,10 @@ const routes: Routes = [
     path:'home',
     component: HomeComponent
   },
+  {
+    path:'fee',
+    component: FeePortalComponent
+  },
   
 ];
 
@@ -23,3 +27,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

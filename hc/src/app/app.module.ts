@@ -52,6 +52,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FeePortalComponent } from './fee-portal/fee-portal.component';
 
 
 @NgModule({
@@ -60,6 +62,7 @@ import { UserComponent } from './user/user.component';
     LoginComponent,
     HomeComponent,
     UserComponent,
+    FeePortalComponent,
     
   ],
   imports: [
@@ -114,6 +117,10 @@ import { UserComponent } from './user/user.component';
     ScrollingModule,
     LayoutModule,
     ReactiveFormsModule,
+    RouterModule,
+    MatSelectModule,
+    
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

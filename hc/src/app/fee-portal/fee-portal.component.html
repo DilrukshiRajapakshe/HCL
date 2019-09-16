@@ -1,0 +1,201 @@
+
+  <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+            <meta name="viewport" content="width=device-width">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            
+            
+        </head>
+    
+    <body>
+      <mat-drawer-container class="example-container, autosize">
+        <div class="example-sidenav-content">
+            <p align="center" style="background-color: black;color:white;font-size: 40px">WPC School Management System</p>
+            
+        <button type="button" mat-button (click)="drawer.toggle()" style="color: white;background-color:black">
+            
+            <img src="../assets/img/menu.png" style="height: 20%;width:10%;"align="left" >
+           
+    
+        </button>
+        
+        </div>
+    
+        <mat-drawer #drawer class="button,auto" mode="side"  style="background-color: black;color:white;width: auto;height: 100%;">
+        
+             <div style="width: 325px;height: fix;">
+               <br>
+                <h3 align=center>Main Menu</h3>
+                <button class="button"style="background:#303f9f;color: white;hover:"><span>Teacher portal</span></button> <br>
+                <button class="button"style="background:#64dd17;color: white;hover:"><span>Student portal</span></button> <br>
+                <button class="button"style="background:#e65c00b7;color: white;hover:"><span>Class portal </span></button> <br>
+                <button class="button"style="background:#ff9100;color: white;hover:"><span>Fee portal</span></button><br>
+                <button class="button"style="background:#321911;color: white;hover:"><span>Course portal</span></button><br>
+                <button class="button"style="background:#ff4081;color: white;hover:"><span>Result portal</span></button><br>
+                <button class="button"style="background:#26a69a;color: white;hover:"><span>Report portal</span></button><br>
+                <button class="button"style="background:#ab47bc;color: white;hover:"><span> Settings</span></button><br>
+                <button class="button"style="background:#d50000;color: white;hover:"><span>Quit</span></button>
+    
+            </div>
+      
+            
+        </mat-drawer>
+        
+      <div class="col-md-12" style="background-color:white">  
+
+      <div style="background-color: white">
+        
+    
+      <div class="row" >
+        <div class="col-md-6" style="padding-left: 10%">
+                <mat-card class="example-card" style="border: 1px solid darkgrey">
+                        
+                        <br>
+                        <mat-divider style="color: darkgrey"></mat-divider>
+                        <mat-card-content style="margin: 5px;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="avatar-upload">
+                                        <div class="avatar-edit">
+                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                            <label for="imageUpload"></label>
+                                        </div>
+                                        <div class="avatar-preview">
+                                            <div id="imagePreview" style="background-image: url('../../assets/img/book.jpg');"></div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <br><br><br><br><br>
+                                    <div class="row" style="margin-left: 10px;">
+                                        <div class="col-7" style=" margin-left: 10px; border: 1px solid darkgrey">Image.png</div>
+                                        <div class="col-1">File</div>
+                                    </div>
+                                    <br>
+                                    <div class="row " style="margin-left: 30px;">
+                                        <mat-card-actions>
+                                            <button mat-raised-button style="background-color: green">Uplode</button>
+                                        </mat-card-actions>
+                                        <!-- <p style="margin-left: 10px;">Student ID : S001</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <mat-divider style="color: darkgrey"></mat-divider>
+                            <div class="raw" style="margin-top: 20px;">
+                                <mat-card-title>Student ID : <small> S001</small> </mat-card-title>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+
+
+
+        </div>
+        <div class="col-md-6" style="color: white;align-content: center" >
+                <form>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="fname">First Name</label>
+                          </div>
+                          <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Your name.." ngModule required>
+                          </div>
+                        </div><br>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="lname">Last Name</label>
+                          </div>
+                          <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name.." ngModule required>
+                          </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-25">
+                              <label for="adrs">Address</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="adrs" name="address" placeholder="Your Address.." ngModule required>
+                            </div>
+                          </div><br>
+                          <div class="row">
+                              <div class="col-25">
+                                <label for="nicno">NIC Number</label>
+                              </div>
+                              <div class="col-75">
+                                <input type="text" id="nicno" name="nicnumber" placeholder="Your NIC Number.." ngModule required>
+                              </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-25">
+                                  <label for="mblno">Mobile Number</label>
+                                </div>
+                                <div class="col-75">
+                                  <input type="text" id="mblno" name="mobileno" placeholder="Your Mobile Number.." ngModule required>
+                                </div>
+                              </div>   
+               
+                                                    
+                      </form>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+                <br>
+                <div class="row ">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th bgcolor=#dddddd>First Name</th>
+                        <th bgcolor=#dddddd>Last Name</th>
+                        <th bgcolor=#dddddd>Address</th>
+                        <th bgcolor=#dddddd>NIC Number</th>
+                        <th bgcolor=#dddddd>Mobile Number</th>
+                        <th bgcolor=#dddddd>Course</th>
+                        <th bgcolor=#dddddd>Course Fee</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td>Kasun</td>
+                        <td>Bandara</td>
+                        <td>Kandy</td>
+                        <td>953512345v</td>
+                        <td>0763365421</td>
+                        <td>JAVA</td>
+                        <td>35,000</td>
+                        <td><button mat-stroked-button color="primary" style="background-color: green;color: white;font-size: 20px">Update</button></td>
+                        <td><button mat-stroked-button color="primary" style="background-color: red;color: white;font-size: 20px">Delete</button></td>
+                     </tr>
+                      <tr>
+                        <td><img src=""></td>
+                        <td>Naveen</td>
+                        <td>Dissanayake</td>
+                        <td>Malabe</td>
+                        <td>953534209v</td>
+                        <td>0712298713</td>
+                        <td>Android</td>
+                        <td>40,000</td>
+                        <td><button mat-stroked-button  color="primary" style="background-color: green;color: white;font-size:20px;">Update</button></td>
+                        <td><button mat-stroked-button color="primary" style="background-color: red;color: white;font-size: 20px">Delete</button></td>
+                      </tr>               
+      
+                    </tbody>
+                  </table>
+                </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+</mat-drawer-container>
+
+
+</body>
+
+<router-outlet></router-outlet>
