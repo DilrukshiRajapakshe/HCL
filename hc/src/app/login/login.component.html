@@ -1,3 +1,16 @@
+<html lang="en">
+	
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		  
+	</head>
+	<body>
+
+			
 
 <div class="login-back" style="background-image:url('../../assets/img/education.jpg');"> 
 		<div class="container-login100" style="color:white;background-color: rgba(0, 0, 0, 0.5)">
@@ -11,8 +24,11 @@
 					<span class="txt1 p-b-11"style="color: white">
 						Username
 					</span>
-					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
-						<input class="input100" type="text" name="username" style="background-color: rgba(0, 0, 0, 0.3)">
+					<div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
+						<span class="btn-show-pass">
+							<i class="fa fa-eye"></i>
+						</span>
+						<input class="input100" type="email" name="pass"style="background-color: rgba(0, 0, 0, 0.3)" >
 						<span class="focus-input100"></span>
 					</div>
 					
@@ -36,9 +52,9 @@
 						</div>
 
 						<div>
-							<a href="#" class="txt3">
-								Forgot Password?
-							</a>
+							<button mat-raised-button (click)="openDialog()">Forgot Password?</button>
+								
+							
 						</div>
 					</div>
 
@@ -47,9 +63,13 @@
 						<button mat-stroked-button color="primary" style="background-color: green;color: white;font-size: 20px" (click)="login()">Login</button>
 						<button mat-stroked-button color="primary" style="background-color:rgba(172, 34, 10, 0.726);color: white;font-size: 20px">Cancel</button>
 						
+
+						
 					</div>
 
 				</form>
 			</div>
 		</div>
 </div>
+</body>
+

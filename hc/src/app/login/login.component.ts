@@ -1,25 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 
 import {FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { WindowPopupComponent } from './window-popup/window-popup.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private dialog: MatDialog) { }
 
-login(){
-  this.router.navigate(['/home'])
-}
+  login(){
+    this.router.navigate(['/home'])
+  }
+  
+  openDialog(): void {
+    const dialogRef = this.dialog.open(WindowPopupComponent,{
+      width: '400px',
+      
+      
+    });
+  }
 
-
-
+  private regex: RegExp = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   ngOnInit() {
+    if(this.regex.test('')){
+
+
+
+    }
   }
   
     email = new FormControl('', [Validators.required, Validators.email]);
@@ -31,5 +46,10 @@ login(){
     }
   
   
+    
 }
+
+
+
+
 

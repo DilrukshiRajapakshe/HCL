@@ -54,6 +54,7 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FeePortalComponent } from './fee-portal/fee-portal.component';
+import { WindowPopupComponent } from './login/window-popup/window-popup.component';
 
 
 @NgModule({
@@ -63,6 +64,7 @@ import { FeePortalComponent } from './fee-portal/fee-portal.component';
     HomeComponent,
     UserComponent,
     FeePortalComponent,
+    WindowPopupComponent,
     
   ],
   imports: [
@@ -123,6 +125,7 @@ import { FeePortalComponent } from './fee-portal/fee-portal.component';
   
   ],
   providers: [],
+  entryComponents:[WindowPopupComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
