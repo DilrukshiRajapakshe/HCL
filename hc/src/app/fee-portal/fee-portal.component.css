@@ -1,5 +1,35 @@
-
-
+ td{
+  padding: 0 !important;
+}
+#wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.student-row:hover{
+cursor: pointer;
+background-color: #999999
+}
+.serach-input{
+  margin-left: 15px;
+}
+.txt-header{
+margin: auto;
+}
+.no-result{
+  margin-left: 25px;
+  font-weight: 400;
+  color: #b71c1c;
+  font-size: 1.1rem;
+}
+.header-text{
+  background:#ff9100;
+  align-content: center;
+  padding: 15px;
+  color: white;
+  font-size: 2rem
+}
 .center {
     margin: auto;
     width: 30%;
@@ -19,28 +49,28 @@ input[type=text], select, textarea{
     box-sizing: border-box;
     resize: vertical;
   }
-  
+
   /* Style the label to display next to the inputs */
   label {
     padding: 12px 12px 12px 0;
     display: inline-block;
   }
-  
-    
+
+
   /* Floating column for labels: 25% width */
   .col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
   }
-  
+
   /* Floating column for inputs: 75% width */
   .col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
   }
-  
+
   /* Clear floats after the columns */
   .row:after {
     content: "";
@@ -54,7 +84,7 @@ input[type=text], select, textarea{
       width: 10%;
       margin-top: 6px;
     }
-    
+
     /* Floating column for inputs: 75% width */
     .col-30 {
       float: left;
@@ -114,7 +144,7 @@ body {margin:25px;}
 
 
 * {
-  padding: 0; margin: 0;  
+  padding: 0; margin: 0;
 }
 html {
   height: 100%;
@@ -139,7 +169,7 @@ html {
 .example-card {
     max-width: 400px;
   }
-  
+
   .example-header-image {
     background-image: url('../../assets/img/book.jpg');
     background-size: cover;
@@ -222,13 +252,13 @@ html {
   }
 
 
-  
+
 .example-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
   }
-  
+
   .example-full-width {
     width: 100%;
   }
@@ -245,9 +275,9 @@ html {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-    
+
   }
-  
+
   .button span {
 
     cursor: pointer;
@@ -255,25 +285,25 @@ html {
     position: relative;
     transition: 0.5s;
   }
-  
+
   .button span:after {
-    
+
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
   }
-  
+
   .button:hover span {
     padding-right: 25px;
-    
+
   }
-  
+
   .button:hover span:after {
     opacity: 1;
     right: 0;
-   
+
   }
   .bbutton {
     border-radius: 4px;
@@ -288,42 +318,42 @@ html {
     cursor: pointer;
     margin: 5px;
     height: 50px;
-    
+
   }
 
-  
+
   * {
     box-sizing: border-box;
   }
-  
+
   /* Create four equal columns that floats next to each other */
   .column {
     float: left;
     width: 25%;
     padding: 20px;
   }
-  
+
   /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  
+
   /* On screens that are 992px wide or less, go from four columns to two columns */
   @media screen and (max-width: 992px) {
     .column {
       width: 50%;
     }
   }
-  
+
   /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .column {
       width: 100%;
     }
   }
-  
+
 
 
 /* form eka */
@@ -342,8 +372,8 @@ html {
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
@@ -496,7 +526,7 @@ iframe {
 [ Contact ]*/
 
 .container-contact100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -507,7 +537,7 @@ iframe {
   justify-content: center;
   align-items: center;
   background: #f2f2f2;
-  
+
 }
 
 .wrap-contact100 {
