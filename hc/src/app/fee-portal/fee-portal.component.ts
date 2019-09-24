@@ -1,11 +1,14 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as CanvasJS from '../../assets/canvasjs.min'
+
+
 @Component({
   selector: 'app-fee-portal',
   templateUrl: './fee-portal.component.html',
   styleUrls: ['./fee-portal.component.css']
 })
 export class FeePortalComponent implements OnInit, AfterViewInit {
+
 
   nostudent: boolean = false;
   constructor() {
@@ -24,47 +27,58 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
       paymnets: [
         {
           month: 'January',
-          amount: ''
+          amount: '5345',
+          paid:false
         },
         {
           month: 'Febuary',
-          amount: ''
+          amount: '555',
+          paid:false
         },
         {
           month: 'March',
-          amount: ''
+          amount: '22',
+          paid:false
         },
         {
           month: 'May',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'June',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'July',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'August',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'September',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'October',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'November',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'December',
-          amount: ''
+          amount: '',
+          paid:false
         }
 
 
@@ -81,47 +95,58 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
       paymnets: [
         {
           month: 'January',
-          amount: ''
+          amount: '22234',
+          paid:false
         },
         {
           month: 'Febuary',
-          amount: ''
+          amount: '',
+          paid:false,
         },
         {
           month: 'March',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'May',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'June',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'July',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'August',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'September',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'October',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'November',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'December',
-          amount: ''
+          amount: '',
+          paid:false
         }
 
       ]
@@ -137,49 +162,59 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
       paymnets: [
         {
           month: 'January',
-          amount: '11'
+          amount: '',
+          paid:false
         },
         {
           month: 'Febuary',
-          amount: '4445'
+          amount: '',
+          paid:false
         },
         {
           month: 'March',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'May',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'June',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'July',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'August',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'September',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'October',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'November',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'December',
-          amount: ''
-        },
-
+          amount: '',
+          paid:false
+        }
       ]
     },
   ]
@@ -188,6 +223,7 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.resetstudent();
+    
   }
   ngAfterViewInit() {
     let div = document.getElementById("chartContainer")
@@ -254,47 +290,58 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
       paymnets: [
         {
           month: 'January',
-          amount: '2500'
+          amount: '',
+          paid:false
         },
         {
           month: 'Febuary',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'March',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'May',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'June',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'July',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'August',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'September',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'October',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'November',
-          amount: ''
+          amount: '',
+          paid:false
         },
         {
           month: 'December',
-          amount: ''
+          amount: '',
+          paid:false
         }
 
       ]
