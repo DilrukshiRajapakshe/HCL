@@ -1,19 +1,63 @@
-<h2 mat-dialog-title>Install Angular</h2>
-<mat-dialog-content class="mat-typography">
-  <h3>Develop across all platforms</h3>
-  <p>Learn one way to build applications with Angular and reuse your code and abilities to build
-    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
+<div class="col-md-12 main-div">
+  <form>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Student name.." [(ngModel)]="selectedStudent.fname"
+          required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Student last name.."
+          [(ngModel)]="selectedStudent.lname" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="adrs">Address</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="adrs" name="address" placeholder="Student Address.."
+          [(ngModel)]="selectedStudent.address" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="nicno">NIC Number</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="nicno" name="nicnumber" placeholder="Student NIC Number.."
+          [(ngModel)]="selectedStudent.NIC" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="mblno">Mobile Number</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="mblno" name="mobileno" placeholder="Student / Parent Mobile Number.."
+          [(ngModel)]="selectedStudent.mobile" required>
+      </div>
+    </div>
 
-  <h3>Speed &amp; Performance</h3>
+    <br>
+    <div class="row float-right" style="margin-bottom: 10px">
+      <button mat-stroked-button color="primary"
+        style="background-color: #b71c1c;color: white;font-size: 20px; padding: 5px 20px;"
+        (click)="cancel()">Cancel</button>
+      <button mat-stroked-button mat-button color="primary"
+        style="background-color: #2e7d32;color: white;font-size: 20px; padding: 5px 20px; margin-left: 5px;"
+        (click)="update()">Update</button>
+
+    </div>
+
+  </form>
 
 
-  <p>An app's components typically define many views, arranged hierarchically. Angular provides
-  the Router service to help you define navigation paths among views. The router provides
-  sophisticated in-browser navigational capabilities.</p>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-        <button  color="primary"
-        style="background-color: #b71c1c;color: white;font-size: 20px;width:90px;margin-left: 300px;">Cancel</button>
-    <button (click)="openDialog()" color="primary"
-        style="background-color: #2e7d32;color: white;font-size: 20px;width:90px;margin-left: 10px">Update</button>
-</mat-dialog-actions>
+</div>

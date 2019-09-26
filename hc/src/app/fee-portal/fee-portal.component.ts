@@ -26,12 +26,7 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
   }
 
 
-  openDialog(): void {
-    const modalRef = this.modalService.open(UserUpdateComponent);
-  }
-  openprint(): void {
-    const modalRef = this.modalService.open(PrintBillComponent);
-  }
+
 
   searchvalue = '';
 
@@ -110,6 +105,18 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
   clear() {
     this.nostudent = false;
     this.resetstudent();
+  }
+  openDialog(): void {
+    const modalRef = this.modalService.open(UserUpdateComponent);
+    modalRef.componentInstance.student = this.selectedStudent;
+    modalRef.componentInstance.backData.subscribe((resp) => {
+      console.log(resp);
+    })
+
+  }
+  openprint(): void {
+    const modalRef = this.modalService.open(PrintBillComponent);
+
   }
   resetstudent() {
     this.selectedStudent = {
