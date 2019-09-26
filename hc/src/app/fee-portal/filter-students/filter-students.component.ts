@@ -1,18 +1,16 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import * as CanvasJS from '../../assets/canvasjs.min'
-import {MatDialog} from '@angular/material/dialog';
-import { UserUpdateComponent } from './user-update/user-update.component';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PrintBillComponent } from './print-bill/print-bill.component';
-
+import { UserUpdateComponent } from '../user-update/user-update.component';
+import * as CanvasJS from '../../../assets/canvasjs.min.js'
 
 @Component({
-  selector: 'app-fee-portal',
-  templateUrl: './fee-portal.component.html',
-  styleUrls: ['./fee-portal.component.css']
+  selector: 'app-filter-students',
+  templateUrl: './filter-students.component.html',
+  styleUrls: ['./filter-students.component.css']
 })
-export class FeePortalComponent implements OnInit, AfterViewInit {
+export class FilterStudentsComponent implements OnInit, AfterViewInit {
 
 
   nostudent: boolean = false;
@@ -20,18 +18,14 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
     
 
   }
-  filter() {
-    this.router.navigate(['/filter'])
+  fee() {
+    this.router.navigate(['/fee'])
   }
   
 
   openDialog(): void {
     const modalRef = this.modalService.open(UserUpdateComponent);
   }
-  openprint(): void {
-    const modalRef = this.modalService.open(PrintBillComponent);
-  }
-
   searchvalue = '';
   students = [
     {
@@ -246,7 +240,7 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
   }
   ngAfterViewInit() {
     let div = document.getElementById("chartContainer")
-    let chart = new CanvasJS.Chart(div, {
+    let chart = new CanvasJS.FilterStudentsComponent(div, {
       animationEnabled: true,
       exportEnabled: true,
       title: {

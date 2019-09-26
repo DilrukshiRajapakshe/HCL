@@ -36,7 +36,7 @@
         <button class="button" style="background:#303f9f;color: white;"><span>Teacher portal</span></button> <br>
         <button class="button" style="background:#64dd17;color: white;"><span>Student portal</span></button> <br>
         <button class="button" style="background:#e65c00b7;color: white;"><span>Class portal </span></button> <br>
-        <button class="button"(click)="home()" style="background:#ff9100;color: white;" ><span >Fee portal</span></button><br>
+        <button class="button"(click)="fee()" style="background:#ff9100;color: white;" ><span >Fee portal</span></button><br>
         <button class="button" style="background:#321911;color: white;"><span>Course portal</span></button><br>
         <button class="button" style="background:#ff4081;color: white;"><span>Result portal</span></button><br>
         <button class="button" style="background:#26a69a;color: white;"><span>Report portal</span></button><br>
@@ -49,7 +49,7 @@
     </mat-drawer>
     
 
-    <div class="col-md-12" style="background-color:#fff3e0">
+    <div class="col-md-12" style="background-color:white">
 
 
       <!-- <div class="center">
@@ -61,23 +61,21 @@
           Fee Portal
         </h2>
       </div>
-      <div class="div">
-          <br>
-      <button class="btndialog" style="background-color: #7e57c2;color: white;font-size: 20px; border-radius: 6px;width: 200px; height: 60px;margin-left: 900px" (click)="filter()">Payment Details</button>
-      <button class="btndialog" style="background-color: #7e57c2;color: white;font-size: 20px; border-radius: 6px;width: 200px; height: 60px;margin-left: 10px"  (click)="openprint()">Issue a Receipt</button>
-    </div>
+      
       <br>
       <div class="col-md-8">
+            <h2>Payment Details</h2><br>
         <div class="row">
+            
 
-          <div class="col-md-6"style="background-color:#fff3e0" >
+          <div class="col-md-6" >
             <input class="form-control serach-input" type="text" name="stext" (ngModelChange)="clear()"
               [(ngModel)]="searchvalue" placeholder="Search by Student NIC" aria-label="Search">
               
              
           </div>
-              <div class="col-md-2" style="background-color:#fff3e0">
-                  <button mat-stroked-button color="primary" style="background-color: #283593;color: white;font-size: 20px;width: 100px;height: 40px;"
+              <div class="col-md-2" >
+                  <button mat-stroked-button color="primary" style="background-color: #283593;color: white;font-size: 20px;"
                   x (click)="search()">Search</button>
                 
              </div>
@@ -90,7 +88,7 @@
 
       <br>
 
-      <div style="background-color:#fff3e0;margin: 20px 20px 20px">
+      <div style="background-color: white;margin: 20px 20px 20px">
 
 
         <div class="row">
@@ -145,9 +143,9 @@
               <br>
               <div >
                           <button mat-stroked-button color="primary"
-                              style="background-color: #b71c1c;color: white;font-size: 20px;width: 100px;height: 40px;margin-left: 300px;">Delete</button>
+                              style="background-color: #b71c1c;color: white;font-size: 20px;width:90px;margin-left: 300px;">Delete</button>
                           <button mat-stroked-button mat-button (click)="openDialog()" color="primary"
-                              style="background-color: #2e7d32;color: white;font-size: 20px;width: 100px;height: 40px;margin-left: 10px">Update</button>
+                              style="background-color: #2e7d32;color: white;font-size: 20px;width:90px;margin-left: 10px">Update</button>
                           
               </div>
 
@@ -174,7 +172,7 @@
               <br>
               <div class="row wrapper">
                 
-                  <button mat-stroked-button color="primary" style="background-color: #283593;color: white;font-size: 20px;width: 100px;height: 40px"
+                  <button mat-stroked-button color="primary" style="background-color: #283593;color: white;font-size: 20px;width:100px"
               (click)="save()">Save</button>
               </div>
             </div>

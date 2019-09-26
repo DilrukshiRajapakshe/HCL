@@ -5,6 +5,8 @@ import { LoginComponent } from '../app/login/login.component';
 import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import { FeePortalComponent } from '../app/fee-portal/fee-portal.component';
+import { UserComponent } from './user/user.component';
+import { FilterStudentsComponent } from './fee-portal/filter-students/filter-students.component';
 
 const routes: Routes = [
   {
@@ -18,6 +20,14 @@ const routes: Routes = [
   {
     path:'fee',
     component: FeePortalComponent
+  },
+  {
+    path:'user',
+    component: UserComponent
+  },
+  {
+    path:'filter',
+    component: FilterStudentsComponent
   },
   
 ];

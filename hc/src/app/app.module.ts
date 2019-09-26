@@ -56,6 +56,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { FeePortalComponent } from './fee-portal/fee-portal.component';
 import { WindowPopupComponent } from './login/window-popup/window-popup.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserUpdateComponent } from './fee-portal/user-update/user-update.component';
+import { FilterStudentsComponent } from './fee-portal/filter-students/filter-students.component';
+import { PrintBillComponent } from './fee-portal/print-bill/print-bill.component';
 
 
 @NgModule({
@@ -66,6 +69,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UserComponent,
     FeePortalComponent,
     WindowPopupComponent,
+    UserUpdateComponent,
+    FilterStudentsComponent,
+    PrintBillComponent,
 
   ],
   imports: [
@@ -126,7 +132,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
   ],
   providers: [],
-  entryComponents: [WindowPopupComponent],
+  entryComponents: [WindowPopupComponent,UserUpdateComponent,PrintBillComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

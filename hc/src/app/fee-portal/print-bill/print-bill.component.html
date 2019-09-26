@@ -1,0 +1,131 @@
+<div class="div">
+
+<mat-accordion class="example-headers-align" >
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                <br>
+              Student Details
+            </mat-panel-title>
+           
+              <img src="../assets/img/don.png" style="width: 70px; height:80px; align-self: auto;">
+            
+          </mat-expansion-panel-header>
+      
+            <form>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Name</span>
+                       </div>
+                  <input type="text" class="form-control" placeholder="User name.." aria-label="Username" aria-describedby="basic-addon1">
+                </div><br>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                     <span class="input-group-text" id="basic-addon1">NIC</span>
+                    </div>
+                     <input type="text" class="form-control" placeholder="student NIC.." aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                      
+
+             
+             </form>
+          <mat-action-row>
+            <button mat-button color="primary" (click)="nextStep()" style="background-color:#2e7d32;color: white">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Course Details
+            </mat-panel-title>
+            
+          </mat-expansion-panel-header>
+      
+          <form>
+                
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="inputGroupSelect01">Course name</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                          <option selected>choose Course name</option>
+                          <option value="1">Data Entry</option>
+                          <option value="2">IOT</option>
+                          <option value="3">Code</option>
+                        </select>
+                      </div><br>
+
+                      <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <label class="input-group-text" for="inputGroupSelect01">IT</label>
+                            </div>
+                            <select class="custom-select" id="inputGroupSelect01">
+                              <option selected>choose course ID</option>
+                              <option value="1">1233</option>
+                              <option value="2">1230</option>
+                              <option value="3">9042</option>
+                              <option value="1">1203</option>
+                              <option value="2">1040</option>
+                              <option value="3">9070</option>
+                            </select>
+                          </div><br>
+                          
+              
+            </form>
+      
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()" style="background-color: #b71c1c;color: white">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()" style="background-color:#2e7d32;color: white">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      
+        <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+                <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Payment Details
+                        </mat-panel-title>
+                        
+                      </mat-expansion-panel-header>
+
+                      <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend2">LKR</span>
+                            </div>
+                            <input  type="number" min="1" placeholder=" enter amount here..">
+                          </div>
+                          <br>
+                     
+          
+                
+
+                <form class="form-inline">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" placeholder="yyyy-mm-dd"
+                             name="dp" [(ngModel)]="model" ngbDatepicker [dayTemplate]="customDay" [markDisabled]="isDisabled" #d="ngbDatepicker">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                
+                <ng-template #customDay let-date let-currentMonth="currentMonth" let-selected="selected" let-disabled="disabled" let-focused="focused">
+                  <span class="custom-day" [class.weekend]="isWeekend(date)" [class.focused]="focused"
+                        [class.bg-primary]="selected" [class.hidden]="date.month !== currentMonth" [class.text-muted]="disabled">
+                    {{ date.day }}
+                  </span>
+                </ng-template>
+
+                <p style="color: #b71c1c">Please make sure all the enter data is correct if not please click previous button</p>
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()"style="background-color: #b71c1c;color: white">Previous</button>
+            <button mat-button color="primary" style="background-color:#2e7d32;color: white">Print</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      
+</mat-accordion>
+</div>
