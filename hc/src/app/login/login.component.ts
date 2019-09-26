@@ -17,30 +17,31 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private dialog: MatDialog, private modalService: NgbModal) { }
 
+  emailMo = '';
+  isValid: boolean = true;
+  private regex: RegExp = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   login() {
-    this.router.navigate(['/home'])
+    if (this.regex.test(this.emailMo)) {
+      this.router.navigate(['/home'])
+    } else {
+      this.isValid = false;
+    }
+
   }
   openDialog(): void {
     const modalRef = this.modalService.open(WindowPopupComponent);
   }
 
+  reset() {
+    this.isValid = true;
+  }
 
-  private regex: RegExp = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   ngOnInit() {
-    if (this.regex.test('')) {
 
-
-
-    }
   }
 
-  email = new FormControl('', [Validators.required, Validators.email]);
 
-  getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-      this.email.hasError('email') ? 'Not a valid email' :
-        '';
-  }
+
 
 
 

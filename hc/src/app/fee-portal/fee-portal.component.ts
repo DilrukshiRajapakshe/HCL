@@ -1,10 +1,11 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as CanvasJS from '../../assets/canvasjs.min'
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { UserUpdateComponent } from './user-update/user-update.component';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PrintBillComponent } from './print-bill/print-bill.component';
+import { Students } from './students';
 
 
 @Component({
@@ -17,13 +18,13 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
 
   nostudent: boolean = false;
   constructor(private router: Router, private dialog: MatDialog, private modalService: NgbModal) {
-    
+
 
   }
   filter() {
     this.router.navigate(['/filter'])
   }
-  
+
 
   openDialog(): void {
     const modalRef = this.modalService.open(UserUpdateComponent);
@@ -33,217 +34,30 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
   }
 
   searchvalue = '';
-  students = [
-    {
-      fname: 'bandara',
-      lname: 'kumara',
-      address: '2131,perera mtw,ambara',
-      NIC: '95245566V',
-      course: 'web ',
-      mobile: '0773557838',
-      cfee: '25000.00',
-      paymnets: [
-        {
-          month: 'January',
-          amount: '5345',
-          paid:false
-        },
-        {
-          month: 'Febuary',
-          amount: '555',
-          paid:false
-        },
-        {
-          month: 'March',
-          amount: '22',
-          paid:false
-        },
-        {
-          month: 'May',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'June',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'July',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'August',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'September',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'October',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'November',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'December',
-          amount: '',
-          paid:false
-        }
 
+  count = 0;
+  pages = [];
 
-      ]
-    },
-    {
-      fname: 'hikka',
-      lname: 'kusal',
-      address: '2,bomulla mtw,ragama',
-      NIC: '95263736V',
-      course: 'data entry',
-      mobile: '077245533',
-      cfee: '5000.00',
-      paymnets: [
-        {
-          month: 'January',
-          amount: '22234',
-          paid:false
-        },
-        {
-          month: 'Febuary',
-          amount: '',
-          paid:false,
-        },
-        {
-          month: 'March',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'May',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'June',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'July',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'August',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'September',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'October',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'November',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'December',
-          amount: '',
-          paid:false
-        }
-
-      ]
-    },
-    {
-      fname: 'nikka',
-      lname: 'ranasignhe',
-      address: '53,kumara rodaya mtw,balangoda',
-      NIC: '7234566V',
-      course: 'beatuty ',
-      mobile: '076552288',
-      cfee: '45000.00',
-      paymnets: [
-        {
-          month: 'January',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'Febuary',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'March',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'May',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'June',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'July',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'August',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'September',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'October',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'November',
-          amount: '',
-          paid:false
-        },
-        {
-          month: 'December',
-          amount: '',
-          paid:false
-        }
-      ]
-    },
-  ]
+  students = [];
   selectedStudent;
 
 
   ngOnInit() {
+    let i = 1;
+    Students.forEach(e => {
+      this.pages.push(i);
+      i += 1;
+    });
+
+    this.students = Students[0].st;
     this.resetstudent();
-    
-    
   }
+
+  selectListFromPage(index) {
+    this.students = Students[index - 1].st;
+
+  }
+
   ngAfterViewInit() {
     let div = document.getElementById("chartContainer")
     let chart = new CanvasJS.Chart(div, {
@@ -310,63 +124,63 @@ export class FeePortalComponent implements OnInit, AfterViewInit {
         {
           month: 'January',
           amount: '',
-          paid:false
+          paid: false
         },
         {
           month: 'Febuary',
           amount: '',
-          paid:false
+          paid: false
         },
         {
           month: 'March',
           amount: '',
-          paid:false
+          paid: false
         },
         {
           month: 'May',
           amount: '',
-          paid:false
+          paid: false
         },
         {
           month: 'June',
           amount: '',
-          paid:false
+          paid: false
         },
         {
           month: 'July',
           amount: '',
-          paid:false
+          paid: false
         },
         {
           month: 'August',
           amount: '',
-          paid:false
+          paid: false
         },
         {
           month: 'September',
           amount: '',
-          paid:false
+          paid: false
         },
         {
           month: 'October',
           amount: '',
-          paid:false
+          paid: false
         },
         {
           month: 'November',
           amount: '',
-          paid:false
+          paid: false
         },
         {
           month: 'December',
           amount: '',
-          paid:false
+          paid: false
         }
 
       ]
     }
   }
 
-  
+
 }
 

@@ -10,9 +10,9 @@
 
 </head>
 
-<body >
+<body>
 
-    
+
 
   <mat-drawer-container class="example-container, autosize">
     <div class="example-sidenav-content">
@@ -36,7 +36,8 @@
         <button class="button" style="background:#303f9f;color: white;"><span>Teacher portal</span></button> <br>
         <button class="button" style="background:#64dd17;color: white;"><span>Student portal</span></button> <br>
         <button class="button" style="background:#e65c00b7;color: white;"><span>Class portal </span></button> <br>
-        <button class="button"(click)="home()" style="background:#ff9100;color: white;" ><span >Fee portal</span></button><br>
+        <button class="button" (click)="home()" style="background:#ff9100;color: white;"><span>Fee
+            portal</span></button><br>
         <button class="button" style="background:#321911;color: white;"><span>Course portal</span></button><br>
         <button class="button" style="background:#ff4081;color: white;"><span>Result portal</span></button><br>
         <button class="button" style="background:#26a69a;color: white;"><span>Report portal</span></button><br>
@@ -47,7 +48,7 @@
 
 
     </mat-drawer>
-    
+
 
     <div class="col-md-12" style="background-color:#fff3e0">
 
@@ -62,25 +63,30 @@
         </h2>
       </div>
       <div class="div">
-          <br>
-      <button class="btndialog" style="background-color: #7e57c2;color: white;font-size: 20px; border-radius: 6px;width: 200px; height: 60px;margin-left: 900px" (click)="filter()">Payment Details</button>
-      <button class="btndialog" style="background-color: #7e57c2;color: white;font-size: 20px; border-radius: 6px;width: 200px; height: 60px;margin-left: 10px"  (click)="openprint()">Issue a Receipt</button>
-    </div>
+        <br>
+        <button class="btndialog"
+          style="background-color: #7e57c2;color: white;font-size: 20px; border-radius: 6px;width: 200px; height: 60px;margin-left: 900px"
+          (click)="filter()">Payment Details</button>
+        <button class="btndialog"
+          style="background-color: #7e57c2;color: white;font-size: 20px; border-radius: 6px;width: 200px; height: 60px;margin-left: 10px"
+          (click)="openprint()">Issue a Receipt</button>
+      </div>
       <br>
       <div class="col-md-8">
         <div class="row">
 
-          <div class="col-md-6"style="background-color:#fff3e0" >
+          <div class="col-md-6" style="background-color:#fff3e0">
             <input class="form-control serach-input" type="text" name="stext" (ngModelChange)="clear()"
               [(ngModel)]="searchvalue" placeholder="Search by Student NIC" aria-label="Search">
-              
-             
+
+
           </div>
-              <div class="col-md-2" style="background-color:#fff3e0">
-                  <button mat-stroked-button color="primary" style="background-color: #283593;color: white;font-size: 20px;width: 100px;height: 40px;"
-                  x (click)="search()">Search</button>
-                
-             </div>
+          <div class="col-md-2" style="background-color:#fff3e0">
+            <button mat-stroked-button color="primary"
+              style="background-color: #283593;color: white;font-size: 20px;width: 100px;height: 40px;" x
+              (click)="search()">Search</button>
+
+          </div>
         </div>
         <div class="row">
           <p *ngIf="nostudent" class="no-result">No results found</p>
@@ -143,46 +149,44 @@
               </div>
 
               <br>
-              <div >
-                          <button mat-stroked-button color="primary"
-                              style="background-color: #b71c1c;color: white;font-size: 20px;width: 100px;height: 40px;margin-left: 300px;">Delete</button>
-                          <button mat-stroked-button mat-button (click)="openDialog()" color="primary"
-                              style="background-color: #2e7d32;color: white;font-size: 20px;width: 100px;height: 40px;margin-left: 10px">Update</button>
-                          
+              <div>
+                <button mat-stroked-button color="primary"
+                  style="background-color: #b71c1c;color: white;font-size: 20px;width: 100px;height: 40px;margin-left: 300px;">Delete</button>
+                <button mat-stroked-button mat-button (click)="openDialog()" color="primary"
+                  style="background-color: #2e7d32;color: white;font-size: 20px;width: 100px;height: 40px;margin-left: 10px">Update</button>
+
               </div>
 
             </form>
 
 
           </div>
-<!-- hshdhdhdhdhddhhdhdhdhdhdhddkdkdkdkdkdkdkd -->
+          <!-- hshdhdhdhdhddhhdhdhdhdhdhddkdkdkdkdkdkdkd -->
 
-          <div class="col-md-3" id="wrapper">
-            <div class="col-md-10" *ngIf="selectedStudent.fname!=''">
+          <div class="col-md-3" *ngIf="selectedStudent.fname!=''" id="wrapper">
+            <div class="col-md-10">
               <div class="row">
                 <table>
                   <tr *ngFor="let pay of selectedStudent.paymnets">
                     <td style="text-align: center;">
                       {{pay.month}}
                     </td>
-                     <td>
+                    <td style="text-align: center">
                       <input type="checkbox" [(ngModel)]="pay.paid" [disabled]="pay.paid">
-                    </td> 
+                    </td>
                   </tr>
                 </table>
               </div>
               <br>
               <div class="row wrapper">
-                
-                  <button mat-stroked-button color="primary" style="background-color: #283593;color: white;font-size: 20px;width: 100px;height: 40px"
-              (click)="save()">Save</button>
+
+                <button mat-stroked-button color="primary"
+                  style="background-color: #283593;color: white;font-size: 20px;width: 100px;height: 40px"
+                  (click)="save()">Save</button>
               </div>
             </div>
-
-
-
           </div>
-          <div class="col-md-4">
+          <div [ngClass]="{'col-md-7': selectedStudent.fname=='','col-md-4': selectedStudent.fname!=''}">
             <div id="chartContainer" style="height: 370px; width: 100%; background: white"></div>
           </div>
 
@@ -221,9 +225,15 @@
                       </tr>
 
                     </tbody>
-                     
-                     
+
+
                   </table>
+                  <div id="wrapper">
+                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                      <mat-button-toggle *ngFor="let page of pages" type="button" (click)="selectListFromPage(page) ">
+                        {{page}}</mat-button-toggle>
+                    </mat-button-toggle-group>
+                  </div>
                 </div>
 
               </div>
@@ -233,7 +243,7 @@
       </div>
     </div>
 
-  
+
   </mat-drawer-container>
 
 </body>

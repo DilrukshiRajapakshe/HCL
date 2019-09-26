@@ -14,8 +14,10 @@
           <span class="btn-show-pass">
             <i class="fa fa-eye"></i>
           </span>
-          <input class="input100" type="email" name="pass" style="background-color: rgba(0, 0, 0, 0.3)">
+          <input class="input100" type="email" name="pass" [(ngModel)]="emailMo" (click)="reset()"
+            style="background-color: rgba(0, 0, 0, 0.3)">
           <span class="focus-input100"></span>
+          <p class="invalid" *ngIf="!isValid">Invalid e-mail!</p>
         </div>
 
         <span class="txt1 p-b-11" style="color: white">
